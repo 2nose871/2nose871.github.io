@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*全体*/
+*{
+    font-family: "A-OTF UD新ゴ Pr6N", "ヒラギノ角ゴ", "Meiryo", sans-serif;
+}
+
+/*時計*/
+#ClockArea{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+h1{
+    text-align: center;
+    font-size: 70px;
+    margin: 0px;
+}
+
+#main{
+    padding-left: 50px;
+}

@@ -30,3 +30,5 @@ var vd = gP.get("v");
 if (vd == "true") {
     document.getElementById("video1").innerHTML = "<a href=\"banmeshidenwa.mp4\">晩飯を誘いに電話をかけるの巻</a>";
 }
+
+console.log(vd);

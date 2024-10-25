@@ -22,3 +22,11 @@ function setfig(num) {
  document.getElementById("ClockArea").innerHTML = sTm;
  }
  setInterval('showClock1()',100);
+
+//動画リンク
+const gP = new URLSearchParams(document.location.search);
+const vd = gP.get("v");
+
+if (vd == "true") {
+    document.getElementById("video1").innerHTML = "<a href=\"banmeshidenwa.mp4\">晩飯を誘いに電話をかけるの巻</a>";
+}

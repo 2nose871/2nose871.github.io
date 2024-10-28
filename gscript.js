@@ -31,7 +31,7 @@ function iframeVideo(videoId) {
 }
 
 if (vd == "true") {
-    document.getElementById("video1").innerHTML = "<a href=\"javascript:iframeVideo(\"W0jNXAmR04c\");\">晩飯を誘いに電話をかけるの巻</a>";
+    document.getElementById("video1").innerHTML = "<a href=\"javascript:iframeVideo('W0jNXAmR04c');\">晩飯を誘いに電話をかけるの巻</a>";
 }
 
-console.log("最終更新202410281158");
+console.log("最終更新202410281200");

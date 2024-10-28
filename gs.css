@@ -21,7 +21,3 @@ h1{
 #main{
     padding-left: 50px;
 }
-
-/*YouTube埋め込み用*/
-#videoPlayer　.ytp-chrome-top, .ytp-pause-overlay, .ytp-youtube-button.ytp-button{display: none;}
-#videoPlayer .ytp-chrome-controls .ytp-button[aria-pressed]::after, .ytp-swatch-background-color, .ytp-settings-button.ytp-hd-quality-badge::after{background-color: white;}

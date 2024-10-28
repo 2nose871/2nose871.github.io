@@ -8,14 +8,17 @@
         <p id="ClockArea"></p>
         <p id="main">
             インスタに公開するまでもない、公開場所を失った<br>動画たちをばらまいている場所
-            <br>URLの末尾にクエリ「v=true」を入れるとリンクが表示されます
+            <br>URLの末尾にクエリパラメータ「v=true」を入れるとリンクが表示されます（そのために普通のブラウザで開いてね）
+            <br>順次公開するかもしれない
         </p>
         <p id="vlinks">
+            <input type="button" value="プレイヤー消去" onClick="clearPlayer()">
+            <p>リンクをクリックするとその下にプレイヤーが出て読み込み次第自動再生されループします</p>
             <div id="video1"></div>
         </p>
         <p id="videoPlayer"></p>
     <footer>
-        <small>最終更新：202410282035</small>
+        <small>最終更新：202410282235<br>Powered by YouTube(TM)</small>
     </footer>
     <script src="gscript.js" lang="javascript"></script>
     </body>

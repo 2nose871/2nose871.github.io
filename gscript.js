@@ -29,9 +29,11 @@ var vd = gP.get("v");
 function iframeVideo(videoId) {
     document.getElementById("videoPlayer").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoId+'?autoplay=1&loop=1&playlist='+videoId+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
 }
-
+function clearPlayer() {
+    document.getElementById("videoPlayer").innerHTML = '';
+}
 if (vd == "true") {
     document.getElementById("video1").innerHTML = '<a href="javascript:iframeVideo(\'W0jNXAmR04c\');">晩飯を誘いに電話をかけるの巻</a>';
 }
 
-console.log("最終更新202410281845");
+console.log("最終更新202410282235");

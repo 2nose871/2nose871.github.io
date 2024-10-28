@@ -27,11 +27,11 @@ function setfig(num) {
 var gP = new URLSearchParams(document.location.search);
 var vd = gP.get("v");
 function iframeVideo(videoId) {
-    document.getElementById("videoPlayer").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoId+'?autoplay=1&loop=1&playlist='+videoId+'></iframe>';
+    document.getElementById("videoPlayer").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoId+'?autoplay=1&loop=1&playlist='+videoId+'"></iframe>';
 }
 
 if (vd == "true") {
     document.getElementById("video1").innerHTML = '<a href="javascript:iframeVideo(\'W0jNXAmR04c\');">晩飯を誘いに電話をかけるの巻</a>';
 }
 
-console.log("最終更新202410281840");
+console.log("最終更新202410281845");

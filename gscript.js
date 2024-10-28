@@ -34,6 +34,6 @@ if (vd == "true") {
     document.getElementById("video1").innerHTML = '<a href="javascript:iframeVideo(\'W0jNXAmR04c\');">晩飯を誘いに電話をかけるの巻</a>';
 }
 
-document.querySelector("#movie_player > div.ytp-pause-overlay-container > div").style.display = "none";
+document.querySelector("#movie_player > div > div.ytp-pause-overlay").style.display = "none";
 
 console.log("最終更新202410281845");

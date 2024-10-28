@@ -14,9 +14,14 @@
             <div id="video1"></div>
         </p>
         <p id="videoPlayer"></p>
-    </body>
     <footer>
         <small>最終更新：202410281150</small>
     </footer>
     <script src="gscript.js" lang="javascript"></script>
+    </body>
+    <style>
+        //YouTube埋め込みプレイヤー用
+        .ytp-chrome-top, .ytp-pause-overlay, .ytp-youtube-button.ytp-button{display: none;}
+        .ytp-chrome-controls .ytp-button[aria-pressed]::after, .ytp-swatch-background-color, .ytp-settings-button.ytp-hd-quality-badge::after{background-color: white;}
+    </style>
 </html>

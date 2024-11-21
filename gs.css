@@ -21,3 +21,10 @@ h1{
 #main{
     padding-left: 50px;
 }
+
+#videoPlayer{
+    height: 50%;
+    width: 50%;
+    
+}
+

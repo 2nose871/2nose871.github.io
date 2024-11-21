@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="gs.css">
+        <link rel="stylesheet" href="plyr.css"
     </head>
     <body>
         <h1>隠しぺーじ（α版）</h1>
@@ -13,16 +14,24 @@
         </p>
         <p id="vlinks">
             <input type="button" value="プレイヤー消去" onClick="clearPlayer()">
-            <p>リンクをクリックするとその下にプレイヤーが出て読み込み次第自動再生されループします</p>
-            <div id="video1"></div>
+            <p>リンクをクリックするとその下にプレイヤーが出るので再生ボタンを押してください</p>
+            <div id="videoList">
+                <a href="?id=W0jNXAmR04c">晩飯を誘いに電話をかけるの巻</a>
+                <a href="?id=OK5QAwgd3_8">なかなか帰らないの巻</a>
+            </div>
         </p>
-        <p id="videoPlayer"></p>
+        <div id="videoPlayer"></div>       
     <footer>
-        <small>最終更新：202410282235<br>Powered by YouTube(TM)</small>
+        <small>最終更新：202411220015<br>Powered by YouTube(TM)</small>
     </footer>
     <script src="gscript.js" lang="javascript"></script>
+    <script src="plyr.js"></script>
+    <script>
+        const player = new Plyr('#player');
+    </script>
     </body>
     <style>
         .ytp-chrome-top, .ytp-pause-overlay, .ytp-youtube-button.ytp-button{display: none !important;}.ytp-chrome-controls .ytp-button[aria-pressed]::after, .ytp-swatch-background-color, .ytp-settings-button.ytp-hd-quality-badge::after{background-color: white !important;}
     </style>
 </html>
+

@@ -25,15 +25,13 @@ function setfig(num) {
 
 //動画リンク
 var gP = new URLSearchParams(document.location.search);
-var vd = gP.get("v");
-function iframeVideo(videoId) {
-    document.getElementById("videoPlayer").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoId+'?autoplay=1&loop=1&playlist='+videoId+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
-}
+var vid = gP.get("id");
 function clearPlayer() {
     document.getElementById("videoPlayer").innerHTML = '';
 }
-if (vd == "true") {
-    document.getElementById("video1").innerHTML = '<a href="javascript:iframeVideo(\'W0jNXAmR04c\');">晩飯を誘いに電話をかけるの巻</a>';
-}
 
-console.log("最終更新202410282235");
+//プレイヤー埋め込み
+if(vid != "" && vid != null) {
+    document.getElementById("videoPlayer").innerHTML = '<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="'+vid+'"></div>'
+}
+console.log(vid);

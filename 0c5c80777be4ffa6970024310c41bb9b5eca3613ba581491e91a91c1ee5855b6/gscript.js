@@ -47,5 +47,6 @@ if(vid != "" && vid != null) {
     if(vid == "bp3_hanami"){emP("Wal9MAt31Lw");}
     if(vid == "bp3_manno"){emP("OE4Udt75zTc");}
     if(vid == "killbba"){emP("8fAXvZTAySg");}
+    if(vid == "harutaParking"){emP("eaIy5zH7IZw");}
 }
 console.log(vid);

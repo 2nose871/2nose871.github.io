@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/*全体*/
+#main, #videoList{display:flex; font-size:20px; flex-flow:column; text-align: center;}
+h1{font-size:40px;}
+a{font-size:80%;}
+@media screen and (min-width: 960px){
+    #main, #videoList{font-size: 16px; display: flex; flex-direction: row; flex-wrap: wrap;}
+    h1{font-size:60px;}
+    a{font-size: 100%; padding: 0% 1%;}
+}
+
+*{
+    font-family: "A-OTF UD新ゴ Pr6N", "ヒラギノ角ゴ", "Meiryo", sans-serif;
+}
+
+/*時計*/
+#ClockArea{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+h1{
+    text-align: center;
+    margin: 0px;
+}
+
+#main{
+    padding-left: 50px;
+}
+
+#videoPlayer{
+    height: 100%;
+    width: 100%;
+    
+}
+
+a{
+    margin: 1em;
+    border: solid 2px black;
+    border-radius: 60px;
+    text-decoration: none;
+    color:black;
+    background-color: gainsboro;
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <meta name="robots" content="noindex">
+        <link rel="stylesheet" href="gs.css">
+        <link rel="stylesheet" href="plyr.css">
+    </head>
+    <body>
+        <h1>隠しぺーじ（β版）</h1>
+        <p id="ClockArea"></p>
+        <noscript>このページではJavaScriptやそれを用いたソフトウェアを使用しています。<br>閲覧するにはJavaScriptを有効にしてください。</noscript>
+        <p id="main">
+            動画たちをばらまいている場所
+            <br>順次公開するかもしれない
+        </p>
+        <p id="vlinks">
+            <input type="button" value="プレイヤー消去" onClick="clearPlayer()">
+            <p>リンクをクリックするとその下にプレイヤーが出るので再生ボタンを押してください</p>
+            <details>
+                <summary>動画リスト</summary>
+                    <div id="videoList">
+                        <a href="?v=sasameshi">晩飯を誘いに電話をかけるの巻</a>
+                        <a href="?v=ayabye">なかなか帰らないの巻</a>
+                        <a href="?v=kinkangyoza">とある日のキンカン会の巻</a>
+                        <a href="?v=kochiVlog">【Vlog】高知ツアー「ひろめ行く」</a>
+                        <a href="?v=midnightGame">深夜のゲーム大会【にのせ&はるた】</a>
+                        <a href="?v=mngumi">グミ釣れた【マリオネットチャンネル】</a>
+                        <a href="?v=mnsub">【マリオネット】他の知育菓子も作ってみよう【サブ】</a>
+                        <a href="?v=youmeanpn">アンパンマンじゃんけん&ドラムセットガチャ開封の巻</a>
+                        <a href="?v=bp3_hanami">【金打3】栗林公園でお花見</a>
+                        <a href="?v=bp3_manno">【金打3】まんのう公園でネモフィラ &土器川生物公園</a>
+                        <a href="?v=killbba">【閲覧注意】暴言祭りの男カー</a>
+                </div>
+            </details>
+        </p>
+        <div id="videoPlayer"></div>       
+    <footer>
+        <small>最終更新：202505021300<br>Powered by YouTube(TM)<br>プレイヤーにはPlyr.jsを使用しています。</small>
+        <details>
+            <summary>既知の問題：不具合があったら確認してください</summary>
+            ・Instagramのブラウザで開くと再生できない：Instagramのブラウザで開くと再生ボタンを押しても再生が始まらない。ChromeやSafariなど普通のブラウザで開いてみて。（android版で確認）
+        </details>
+    </footer>
+    <script src="gscript.js" lang="javascript"></script>
+    <script src="plyr.js"></script>
+    <script>
+        const player = new Plyr('#player');
+    </script>
+    </body>
+    <style>
+        .ytp-chrome-top, .ytp-pause-overlay, .ytp-youtube-button.ytp-button{display: none !important;}.ytp-chrome-controls .ytp-button[aria-pressed]::after, .ytp-swatch-background-color, .ytp-settings-button.ytp-hd-quality-badge::after{background-color: white !important;}
+    </style>
+</html>
+

@@ -48,5 +48,8 @@ if(vid != "" && vid != null) {
     if(vid == "bp3_manno"){emP("OE4Udt75zTc");}
     if(vid == "killbba"){emP("8fAXvZTAySg");}
     if(vid == "harutaParking"){emP("eaIy5zH7IZw");}
+    if(vid == "kurashikiTour"){emP("OXs_8D1XR8Y");}
+    if(vid == "kindakaiChopstick"){emP("tyuudbPxVuE");}
+    if(vid == "kawataRade"){emP("ZeNqmX3rsjM");}
 }
 console.log(vid);

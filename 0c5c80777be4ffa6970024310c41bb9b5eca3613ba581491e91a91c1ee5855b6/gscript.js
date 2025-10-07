@@ -51,5 +51,8 @@ if(vid != "" && vid != null) {
     if(vid == "kurashikiTour"){emP("OXs_8D1XR8Y");}
     if(vid == "kindakaiChopstick"){emP("tyuudbPxVuE");}
     if(vid == "kawataRade"){emP("ZeNqmX3rsjM");}
+    if(vid == "mng2mk8d"){emP("QP3-W7_au7M");}
+    if(vid == "mng2mbros"){emP("jGU4GMZV-7w");}
 }
 console.log(vid);
+

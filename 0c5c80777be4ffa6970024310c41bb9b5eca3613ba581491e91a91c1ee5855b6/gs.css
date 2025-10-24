@@ -3,7 +3,7 @@
 #main, #videoList{display:flex; font-size:20px; flex-flow:column; text-align: center;}
 h1{font-size:40px;}
 a{font-size:80%;}
-@media screen and (min-width: 960px){
+@media screen and (min-width: 1946px){
     #main, #videoList{font-size: 16px; display: flex; flex-direction: row; flex-wrap: wrap;}
     h1{font-size:60px;}
     a{font-size: 100%; padding: 0% 1%;}
@@ -31,17 +31,36 @@ h1{
 }
 
 #videoPlayer{
-    height: 100%;
     width: 100%;
-    
+}
+@media screen and (min-width: 1946px) {
+    #videoPlayer{width: 1920px;}
 }
 
 a{
-    margin: 1em;
+    margin: 0%;
+    width: 49%;
     border: solid 2px black;
-    border-radius: 60px;
+    border-radius: 15px;
     text-decoration: none;
     color:black;
-    background-color: gainsboro;
+    background-color: white;
+    text-align: center;
+}
+
+.thumimg{
+    width: 100%;
+    border-radius: 15px;
+}
+.l{float: left;}
+
+.r{float: right;}
+
+.vfl{display: inline-block; margin-bottom: 10%;}
+
+@media screen and (min-width: 1946px) {
+    a{width: 30%;}
+    .thumimg{width: 100%;}
+    .vfl{display: flex; justify-content: center; margin-bottom: 5%;}
 }
 

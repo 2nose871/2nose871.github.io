@@ -7,13 +7,11 @@
         <link rel="stylesheet" href="plyr.css">
     </head>
     <body>
-        <h1>隠しぺーじ（β版）</h1>
+        <h1>隠しぺーじ（v1.01）</h1>
         <p id="ClockArea"></p>
         <noscript>このページではJavaScriptやそれを用いたソフトウェアを使用しています。<br>閲覧するにはJavaScriptを有効にしてください。</noscript>
         <p id="main">
-            動画たちをばらまいている場所
-            <br>順次公開するかもしれない
-            <br><span style="color:red;">NEW!! 新着動画があります</span>（2025.10.07）
+            <span style="color:red;">NEW!! 新着動画があります</span>（2025.10.24）
         </p>
         <p id="vlinks">
             <input type="button" value="プレイヤー消去" onClick="clearPlayer()">
@@ -21,23 +19,42 @@
             <details>
                 <summary>動画リスト</summary>
                     <div id="videoList">
-                        <a href="?v=sasameshi">晩飯を誘いに電話をかけるの巻</a>
-                        <a href="?v=ayabye">なかなか帰らないの巻</a>
-                        <a href="?v=kinkangyoza">とある日のキンカン会の巻</a>
-                        <a href="?v=kochiVlog">【Vlog】高知ツアー「ひろめ行く」</a>
-                        <a href="?v=midnightGame">深夜のゲーム大会【にのせ&はるた】</a>
-                        <a href="?v=mngumi">グミ釣れた【マリオネットチャンネル】</a>
-                        <a href="?v=mnsub">【マリオネット】他の知育菓子も作ってみよう【サブ】</a>
-                        <a href="?v=youmeanpn">アンパンマンじゃんけん&ドラムセットガチャ開封の巻</a>
-                        <a href="?v=bp3_hanami">【金打3】栗林公園でお花見</a>
-                        <a href="?v=bp3_manno">【金打3】まんのう公園でネモフィラ &土器川生物公園</a>
-                        <a href="?v=killbba">【閲覧注意】暴言祭りの男カー</a>
-                        <a href="?v=harutaParking">はるたの🔰駐車練習</a>
-                        <a href="?v=kurashikiTour">【金打3】松本交通presents 春山ツアー！</a>
-                        <a href="?v=kindakaiChopstick">【箸】金打会の一幕の巻</a>
-                        <a href="?v=kawataRade">川田先生のラデツキー講座♪</a>
-                        <a href="?v=mng2mk8d">【にの＆はる】深夜ゲーム大会第2弾！＜マリカ8DX編＞</a>
-                        <a href="?v=mng2mbros">【にの＆はる】深夜ゲーム大会第2弾！＜マリオBROS.編＞</a>
+                        <div class="vfl">
+                            <a href="?v=sasameshi" class="l"><img class="thumimg" src="http://img.youtube.com/vi/W0jNXAmR04c/maxresdefault.jpg"><br>晩飯を誘いに電話をかけるの巻</a>
+                            <a href="?v=ayabye" class="r"><img class="thumimg" src="http://img.youtube.com/vi/OK5QAwgd3_8/maxresdefault.jpg">なかなか帰らないの巻</a>
+                        </div>
+                        <div class="vfl">
+                            <a href="?v=kinkangyoza" class="l"><img src="http://img.youtube.com/vi/79isKVtXjGw/maxresdefault.jpg" class="thumimg">とある日のキンカン会の巻</a>
+                            <a href="?v=kochiVlog" class="r"><img src="http://img.youtube.com/vi/UKWkzPtPmKA/maxresdefault.jpg" class="thumimg">【Vlog】高知ツアー「ひろめ行く」</a>
+                        </div>
+                        <div class="vfl">
+                            <a href="?v=midnightGame" class="l"><img src="http://img.youtube.com/vi/8cqg7Vg4aZY/maxresdefault.jpg" class="thumimg">深夜のゲーム大会【にのせ&はるた】</a>
+                            <a href="?v=mngumi" class="r"><img src="http://img.youtube.com/vi/bIcCtfqZCRw/maxresdefault.jpg" class="thumimg">グミ釣れた【マリオネットチャンネル】</a>
+                        </div>
+                        <div class="vfl">
+                            <a href="?v=mnsub" class="l"><img src="http://img.youtube.com/vi/-UTecd8K0dA/maxresdefault.jpg" class="thumimg">【マリオネット】他の知育菓子も作ってみよう【サブ】</a>
+                            <a href="?v=youmeanpn" class="r"><img src="http://img.youtube.com/vi/9egwNIDfNJI/maxresdefault.jpg" class="thumimg">アンパンマンじゃんけん&ドラムセットガチャ開封の巻</a>
+                        </div>
+                        <div class="vfl">
+                            <a href="?v=bp3_hanami" class="l"><img src="http://img.youtube.com/vi/Wal9MAt31Lw/maxresdefault.jpg" class="thumimg">【金打3】栗林公園でお花見</a>
+                            <a href="?v=bp3_manno" class="r"><img src="http://img.youtube.com/vi/OE4Udt75zTc/maxresdefault.jpg" class="thumimg">【金打3】まんのう公園でネモフィラ &土器川生物公園</a>
+                        </div>
+                        <div class="vfl">
+                            <a href="?v=killbba" class="l"><img src="http://img.youtube.com/vi/8fAXvZTAySg/maxresdefault.jpg" class="thumimg">【閲覧注意】暴言祭りの男カー</a>
+                            <a href="?v=harutaParking" class="r"><img src="http://img.youtube.com/vi/eaIy5zH7IZw/maxresdefault.jpg" class="thumimg">はるたの🔰駐車練習</a>
+                        </div>
+                        <div class="vfl">
+                            <a href="?v=kurashikiTour" class="l"><img src="http://img.youtube.com/vi/OXs_8D1XR8Y/maxresdefault.jpg" class="thumimg">【金打3】松本交通presents 春山ツアー！</a>
+                            <a href="?v=kindakaiChopstick" class="r"><img src="http://img.youtube.com/vi/tyuudbPxVuE/maxresdefault.jpg" class="thumimg">【箸】金打会の一幕の巻</a>
+                        </div>
+                        <div class="vfl">
+                            <a href="?v=kawataRade" class="l"><img src="http://img.youtube.com/vi/ZeNqmX3rsjM/maxresdefault.jpg" class="thumimg">川田先生のラデツキー講座♪</a>
+                            <a href="?v=mng2mk8d" class="r"><img src="http://img.youtube.com/vi/QP3-W7_au7M/maxresdefault.jpg" class="thumimg">【にの＆はる】深夜ゲーム大会第2弾！＜マリカ8DX編＞</a>
+                        </div>
+                        <div class="vfl">
+                            <a href="?v=mng2mbros" class="l"><img src="http://img.youtube.com/vi/jGU4GMZV-7w/maxresdefault.jpg" class="thumimg">【にの＆はる】深夜ゲーム大会第2弾！＜マリオBROS.編＞</a>
+                            <a href="?v=shabon" class="r"><img src="http://img.youtube.com/vi/XHxuvVIb4kk/maxresdefault.jpg" class="thumimg">シャボン玉で遊んだ日</a>
+                        </div>
                 </div>
             </details>
         </p>

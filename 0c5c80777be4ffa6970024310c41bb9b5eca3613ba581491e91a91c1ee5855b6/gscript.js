@@ -53,6 +53,7 @@ if(vid != "" && vid != null) {
     if(vid == "kawataRade"){emP("ZeNqmX3rsjM");}
     if(vid == "mng2mk8d"){emP("QP3-W7_au7M");}
     if(vid == "mng2mbros"){emP("jGU4GMZV-7w");}
+    if(vid == "shabon"){emP("XHxuvVIb4kk");}
 }
 console.log(vid);
 

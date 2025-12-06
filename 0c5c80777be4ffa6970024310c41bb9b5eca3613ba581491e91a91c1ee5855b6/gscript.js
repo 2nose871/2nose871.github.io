@@ -54,6 +54,9 @@ if(vid != "" && vid != null) {
     if(vid == "mng2mk8d"){emP("QP3-W7_au7M");}
     if(vid == "mng2mbros"){emP("jGU4GMZV-7w");}
     if(vid == "shabon"){emP("XHxuvVIb4kk");}
+    if(vid == "parkandkeiba"){emP("1zR9GgzJC2E");}
+    if(vid == "shionoesnow"){emP("pnVaM9hX_70");}
+    if(vid == "kindafish"){emP("XIcDiFui-7c");}
 }
 console.log(vid);
 

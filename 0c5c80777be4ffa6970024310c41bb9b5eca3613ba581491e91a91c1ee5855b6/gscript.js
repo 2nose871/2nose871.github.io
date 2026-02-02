@@ -57,6 +57,8 @@ if(vid != "" && vid != null) {
     if(vid == "parkandkeiba"){emP("1zR9GgzJC2E");}
     if(vid == "shionoesnow"){emP("pnVaM9hX_70");}
     if(vid == "kindafish"){emP("XIcDiFui-7c");}
+    if(vid == "gotoShinspo"){emP("XRpk_gBTvLk");}
 }
 console.log(vid);
+
 

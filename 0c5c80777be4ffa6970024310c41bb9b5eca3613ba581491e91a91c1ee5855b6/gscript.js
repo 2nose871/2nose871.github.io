@@ -21,7 +21,7 @@ function setfig(num) {
  var sTm = nowHour + ":" + nowMin;
  document.getElementById("ClockArea").innerHTML = sTm;
  }
- setInterval('showClock1()',100);
+ setInterval('showClock1()',1000);
 
 //動画リンク
 var gP = new URLSearchParams(document.location.search);

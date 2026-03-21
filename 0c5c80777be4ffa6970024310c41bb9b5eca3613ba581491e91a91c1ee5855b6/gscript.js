@@ -58,6 +58,8 @@ if(vid != "" && vid != null) {
     if(vid == "shionoesnow"){emP("pnVaM9hX_70");}
     if(vid == "kindafish"){emP("XIcDiFui-7c");}
     if(vid == "gotoShinspo"){emP("XRpk_gBTvLk");}
+    if(vid == "flucall"){emP("jxToN_0IGgw");}
+    if(vid == "snowgotohell"){emP("x6vJL1xcB5g");}
 }
 console.log(vid);
 

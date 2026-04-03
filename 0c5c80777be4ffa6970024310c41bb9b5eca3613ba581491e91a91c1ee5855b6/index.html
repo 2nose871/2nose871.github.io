@@ -1,83 +1,95 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>にのせのかくしぺ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
         <meta name="robots" content="noindex">
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+        <link rel="shortcut icon" href="favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="favicon/site.webmanifest" />
         <link rel="stylesheet" href="gs.css">
         <link rel="stylesheet" href="plyr.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@100;400;700;800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>隠しぺーじ（v1.02）</h1>
-        <p id="ClockArea"></p>
+        <h1>にのせ<span style="font-size: 80%;">の</span><wbr>かくしぺ<span id="headerSub" style="display: none;"><a class="showToast" href="javascript:void(0)" onclick="showToast()">軽量版</a></span></h1>
         <noscript>このページではJavaScriptやそれを用いたソフトウェアを使用しています。<br>閲覧するにはJavaScriptを有効にしてください。</noscript>
+        <div id="toast" class="toast"></div>
         <p id="main">
             <span style="color:red;">NEW!! 新着動画があります</span>（2025.03.21）
         </p>
+        <p id="topmsg">下の「▶動画リスト」から<wbr>見たいのを選んでね！</p>
+        <div id="videoPlayer"></div>
+        <div id="vtitle"></div>
         <p id="vlinks">
             <input type="button" value="プレイヤー消去" onClick="clearPlayer()">
-            <p>リンクをクリックするとその下にプレイヤーが出るので再生ボタンを押してください</p>
-            <details>
+            <details style="flex: 1;">
                 <summary>動画リスト</summary>
                     <div id="videoList">
                         <div class="vfl">
-                            <a href="?v=sasameshi" class="l"><img class="thumimg" src="http://img.youtube.com/vi/W0jNXAmR04c/maxresdefault.jpg"><br>晩飯を誘いに電話をかけるの巻</a>
-                            <a href="?v=ayabye" class="r"><img class="thumimg" src="http://img.youtube.com/vi/OK5QAwgd3_8/maxresdefault.jpg">なかなか帰らないの巻</a>
+                            <a href="?v=flucall" class="l"><img src="" data-src="https://img.youtube.com/vi/jxToN_0IGgw/maxresdefault.jpg" class="thumimg">【長時間】インフル金打3会（2人元気）</a>
+                            <a href="?v=snowgotohell" class="r"><img src="" data-src="https://img.youtube.com/vi/x6vJL1xcB5g/maxresdefault.jpg" class="thumimg">【危】雪って怖いね</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=kinkangyoza" class="l"><img src="http://img.youtube.com/vi/79isKVtXjGw/maxresdefault.jpg" class="thumimg">とある日のキンカン会の巻</a>
-                            <a href="?v=kochiVlog" class="r"><img src="http://img.youtube.com/vi/UKWkzPtPmKA/maxresdefault.jpg" class="thumimg">【Vlog】高知ツアー「ひろめ行く」</a>
+                            <a href="?v=kindafish" class="l"><img src="" data-src="https://img.youtube.com/vi/XIcDiFui-7c/maxresdefault.jpg" class="thumimg">キンダみくら魚会…だけどシャボン玉！の巻</a>
+                            <a href="?v=gotoShinspo" class="r"><img src="" data-src="https://img.youtube.com/vi/XRpk_gBTvLk/maxresdefault.jpg" class="thumimg">【心霊】真夜中に徘徊したらエライことになった</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=midnightGame" class="l"><img src="http://img.youtube.com/vi/8cqg7Vg4aZY/maxresdefault.jpg" class="thumimg">深夜のゲーム大会【にのせ&はるた】</a>
-                            <a href="?v=mngumi" class="r"><img src="http://img.youtube.com/vi/bIcCtfqZCRw/maxresdefault.jpg" class="thumimg">グミ釣れた【マリオネットチャンネル】</a>
+                            <a href="?v=parkandkeiba" class="l"><img src="" data-src="https://img.youtube.com/vi/1zR9GgzJC2E/maxresdefault.jpg" class="thumimg">キンダ、公園で遊ぶの巻＋競馬</a>
+                            <a href="?v=shionoesnow" class="r"><img src="" data-src="https://img.youtube.com/vi/pnVaM9hX_70/maxresdefault.jpg" class="thumimg">塩江で遭難!? 雪遊びの巻</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=mnsub" class="l"><img src="http://img.youtube.com/vi/-UTecd8K0dA/maxresdefault.jpg" class="thumimg">【マリオネット】他の知育菓子も作ってみよう【サブ】</a>
-                            <a href="?v=youmeanpn" class="r"><img src="http://img.youtube.com/vi/9egwNIDfNJI/maxresdefault.jpg" class="thumimg">アンパンマンじゃんけん&ドラムセットガチャ開封の巻</a>
+                            <a href="?v=mng2mbros" class="l"><img src="" data-src="http://img.youtube.com/vi/jGU4GMZV-7w/maxresdefault.jpg" class="thumimg">【にの＆はる】深夜ゲーム大会第2弾！＜マリオBROS.編＞</a>
+                            <a href="?v=shabon" class="r"><img src="" data-src="http://img.youtube.com/vi/XHxuvVIb4kk/maxresdefault.jpg" class="thumimg">シャボン玉で遊んだ日</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=bp3_hanami" class="l"><img src="http://img.youtube.com/vi/Wal9MAt31Lw/maxresdefault.jpg" class="thumimg">【金打3】栗林公園でお花見</a>
-                            <a href="?v=bp3_manno" class="r"><img src="http://img.youtube.com/vi/OE4Udt75zTc/maxresdefault.jpg" class="thumimg">【金打3】まんのう公園でネモフィラ &土器川生物公園</a>
+                            <a href="?v=kawataRade" class="l"><img src="" data-src="http://img.youtube.com/vi/ZeNqmX3rsjM/maxresdefault.jpg" class="thumimg">川田先生のラデツキー講座♪</a>
+                            <a href="?v=mng2mk8d" class="r"><img src="" data-src="http://img.youtube.com/vi/QP3-W7_au7M/maxresdefault.jpg" class="thumimg">【にの＆はる】深夜ゲーム大会第2弾！＜マリカ8DX編＞</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=killbba" class="l"><img src="http://img.youtube.com/vi/8fAXvZTAySg/maxresdefault.jpg" class="thumimg">【閲覧注意】暴言祭りの男カー</a>
-                            <a href="?v=harutaParking" class="r"><img src="http://img.youtube.com/vi/eaIy5zH7IZw/maxresdefault.jpg" class="thumimg">はるたの🔰駐車練習</a>
+                            <a href="?v=kurashikiTour" class="l"><img src="" data-src="http://img.youtube.com/vi/OXs_8D1XR8Y/maxresdefault.jpg" class="thumimg">【金打3】松本交通presents 春山ツアー！</a>
+                            <a href="?v=kindakaiChopstick" class="r"><img src="" data-src="http://img.youtube.com/vi/tyuudbPxVuE/maxresdefault.jpg" class="thumimg">【箸】金打会の一幕の巻</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=kurashikiTour" class="l"><img src="http://img.youtube.com/vi/OXs_8D1XR8Y/maxresdefault.jpg" class="thumimg">【金打3】松本交通presents 春山ツアー！</a>
-                            <a href="?v=kindakaiChopstick" class="r"><img src="http://img.youtube.com/vi/tyuudbPxVuE/maxresdefault.jpg" class="thumimg">【箸】金打会の一幕の巻</a>
+                            <a href="?v=killbba" class="l"><img src="" data-src="http://img.youtube.com/vi/8fAXvZTAySg/maxresdefault.jpg" class="thumimg">【閲覧注意】暴言祭りの男カー</a>
+                            <a href="?v=harutaParking" class="r"><img src="" data-src="http://img.youtube.com/vi/eaIy5zH7IZw/maxresdefault.jpg" class="thumimg">はるたの🔰駐車練習</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=kawataRade" class="l"><img src="http://img.youtube.com/vi/ZeNqmX3rsjM/maxresdefault.jpg" class="thumimg">川田先生のラデツキー講座♪</a>
-                            <a href="?v=mng2mk8d" class="r"><img src="http://img.youtube.com/vi/QP3-W7_au7M/maxresdefault.jpg" class="thumimg">【にの＆はる】深夜ゲーム大会第2弾！＜マリカ8DX編＞</a>
+                            <a href="?v=bp3_hanami" class="l"><img src="" data-src="http://img.youtube.com/vi/Wal9MAt31Lw/maxresdefault.jpg" class="thumimg">【金打3】栗林公園でお花見</a>
+                            <a href="?v=bp3_manno" class="r"><img src="" data-src="http://img.youtube.com/vi/OE4Udt75zTc/maxresdefault.jpg" class="thumimg">【金打3】まんのう公園でネモフィラ &土器川生物公園</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=mng2mbros" class="l"><img src="http://img.youtube.com/vi/jGU4GMZV-7w/maxresdefault.jpg" class="thumimg">【にの＆はる】深夜ゲーム大会第2弾！＜マリオBROS.編＞</a>
-                            <a href="?v=shabon" class="r"><img src="http://img.youtube.com/vi/XHxuvVIb4kk/maxresdefault.jpg" class="thumimg">シャボン玉で遊んだ日</a>
+                            <a href="?v=mnsub" class="l"><img src="" data-src="http://img.youtube.com/vi/-UTecd8K0dA/maxresdefault.jpg" class="thumimg">【マリオネット】他の知育菓子も作ってみよう【サブ】</a>
+                            <a href="?v=youmeanpn" class="r"><img src="" data-src="http://img.youtube.com/vi/9egwNIDfNJI/maxresdefault.jpg" class="thumimg">アンパンマンじゃんけん&ドラムセットガチャ開封の巻</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=parkandkeiba" class="l"><img src="https://img.youtube.com/vi/1zR9GgzJC2E/maxresdefault.jpg" class="thumimg">キンダ、公園で遊ぶの巻＋競馬</a>
-                            <a href="?v=shionoesnow" class="r"><img src="https://img.youtube.com/vi/pnVaM9hX_70/maxresdefault.jpg" class="thumimg">塩江で遭難!? 雪遊びの巻</a>
+                            <a href="?v=midnightGame" class="l"><img src="" data-src="http://img.youtube.com/vi/8cqg7Vg4aZY/maxresdefault.jpg" class="thumimg">深夜のゲーム大会【にのせ&はるた】</a>
+                            <a href="?v=mngumi" class="r"><img src="" data-src="http://img.youtube.com/vi/bIcCtfqZCRw/maxresdefault.jpg" class="thumimg">グミ釣れた【マリオネットチャンネル】</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=kindafish" class="l"><img src="https://img.youtube.com/vi/XIcDiFui-7c/maxresdefault.jpg" class="thumimg">キンダみくら魚会…だけどシャボン玉！の巻</a>
-                            <a href="?v=gotoShinspo" class="r"><img src="https://img.youtube.com/vi/XRpk_gBTvLk/maxresdefault.jpg" class="thumimg">【心霊】真夜中に徘徊したらエライことになった</a>
+                            <a href="?v=kinkangyoza" class="l"><img src="" data-src="http://img.youtube.com/vi/79isKVtXjGw/maxresdefault.jpg" class="thumimg">とある日のキンカン会の巻</a>
+                            <a href="?v=kochiVlog" class="r"><img src="" data-src="http://img.youtube.com/vi/UKWkzPtPmKA/maxresdefault.jpg" class="thumimg">【Vlog】高知ツアー「ひろめ行く」</a>
                         </div>
                         <div class="vfl">
-                            <a href="?v=flucall" class="l"><img src="https://img.youtube.com/vi/jxToN_0IGgw/maxresdefault.jpg" class="thumimg">【長時間】インフル金打3会（2人元気）</a>
-                            <a href="?v=snowgotohell" class="r"><img src="https://img.youtube.com/vi/x6vJL1xcB5g/maxresdefault.jpg" class="thumimg">【危】雪って怖いね</a>
+                            <a href="?v=sasameshi" class="l"><img class="thumimg" src="" data-src="http://img.youtube.com/vi/W0jNXAmR04c/maxresdefault.jpg"><br>晩飯を誘いに電話をかけるの巻</a>
+                            <a href="?v=ayabye" class="r"><img class="thumimg" src="" data-src="http://img.youtube.com/vi/OK5QAwgd3_8/maxresdefault.jpg">なかなか帰らないの巻</a>
                         </div>
                 </div>
             </details>
         </p>
-        <div id="videoPlayer"></div>       
-    <footer>
-        <small>最終更新：202603211535<br>Powered by YouTube(TM)<br>プレイヤーにはPlyr.jsを使用しています。</small>
-        <details>
-            <summary>既知の問題：不具合があったら確認してください</summary>
-            ・Instagramのブラウザで開くと再生できない：Instagramのブラウザで開くと再生ボタンを押しても再生が始まらない。ChromeやSafariなど普通のブラウザで開いてみて。（android版で確認）
-        </details>
-    </footer>
+    <div class="ftwr">
+        <footer>
+            <div class="ftt">
+                <small>最終更新：202603211535<br>Powered by YouTube(TM)<br>プレイヤーにはPlyr.jsを使用しています。</small><br>
+                <small>©2nose</small>
+                <p id="update"><a id="tochgl" href="changelog.html">アップデートしました！</a></p>
+            </div>
+        </footer>
+    </div>
     <script src="gscript.js" lang="javascript"></script>
     <script src="plyr.js"></script>
     <script>

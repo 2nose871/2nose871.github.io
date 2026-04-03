@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>にのせのかくしぺ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <meta name="robots" content="noindex">
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+        <link rel="shortcut icon" href="favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+        <link rel="stylesheet" href="gs.css">
+        <link rel="stylesheet" href="plyr.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@100;400;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>更新履歴<span id="headerSub">軽量版</span></h1>
+        <noscript>このページではJavaScriptやそれを用いたソフトウェアを使用しています。<br>閲覧するにはJavaScriptを有効にしてください。</noscript>
+        <div id="toast" class="toast"></div>
+        <main id="changelogbox">
+            <p>
+                <h3>2026年4月</h3>
+                <ul>
+                    <li>
+                    デザインを一新してみました
+                    <ul>
+                    <li>タイトルをちょっと枠つけました</li>
+                    <li>フッターもフッターらしくなりました多分</li>
+                    <li>基本のフォントとしてLINE Seed JPを適用するようにしました</li>
+                    <li>動画のタイトルが表示されるようになりました</li>
+                    <li>時計はいらんので消しました</li>
+                    <li>faviconも追加しました</li>
+                    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                    軽量化用設定を作ってみました
+                    <ul>
+                    <li>モバイルデータ通信で見てるのを検出すると適用されます多分</li>
+                    <li>フォントをダウンロードせずデバイスのデフォルトフォントで表示されます</li>
+                    <li>サムネの解像度が低くなります</li>
+                    <li>動画見るサイトにこんなのいるか知らんけどつけてみたかった</li>
+                    <li>ちなみにSafariはこの判定に使ってる機能が使えないらしい</li>
+                    </ul>
+                    </li>
+                </ul>
+            </p>
+        </main>
+    <div class="ftwr">
+        <footer>
+            <div class="ftt">
+                <small>最終更新：202603211535<br>Powered by YouTube(TM)<br>プレイヤーにはPlyr.jsを使用しています。</small><br>
+                <small>©2nose</small>
+                <p id="update"><a id="tochgl" href="changelog.html">アップデートしました！</a></p>
+            </div>
+        </footer>
+    </div>
+    <script src="gscript.js" lang="javascript"></script>
+    <script src="plyr.js"></script>
+    <script>
+        const player = new Plyr('#player');
+    </script>
+    </body>
+    <style>
+        .ytp-chrome-top, .ytp-pause-overlay, .ytp-youtube-button.ytp-button{display: none !important;}.ytp-chrome-controls .ytp-button[aria-pressed]::after, .ytp-swatch-background-color, .ytp-settings-button.ytp-hd-quality-badge::after{background-color: white !important;}
+    </style>
+</html>
+

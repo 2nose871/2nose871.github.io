@@ -75,6 +75,9 @@ if(vid != "" && vid != null) {
     if(vid == "gotoShinspo"){ytid = "XRpk_gBTvLk";}
     if(vid == "flucall"){ytid = "jxToN_0IGgw";}
     if(vid == "snowgotohell"){ytid = "x6vJL1xcB5g";}
+    if(vid == "acnhaoi"){ytid = "63PLfXU29Z8";}
+    if(vid == "acnhkin2"){ytid = "KjQ9fm3Q1uE";}
+    if(vid == "kin2overcooked"){ytid = "V39Q2aI0FZ8";}
 }
 if (vid !== "" && vid !== null) {
     emP(ytid);

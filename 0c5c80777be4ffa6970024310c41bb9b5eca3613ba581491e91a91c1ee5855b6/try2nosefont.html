@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>にのせフォント｜にのせのかくしぺ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <meta name="robots" content="noindex">
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+        <link rel="shortcut icon" href="favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+        <link rel="stylesheet" href="gs.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@100;400;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>にのせフォント<span id="headerSub" style="display: none;"></span></h1>
+        <noscript>このページではJavaScriptやそれを用いたソフトウェアを使用しています。<br>閲覧するにはJavaScriptを有効にしてください。</noscript>
+        <div id="toast" class="toast"></div>
+        <p id="topmsg">にのせフォントを試し打ち出来ます！</p>
+        <div id="txtbox">
+            <input type="button" value="太字にする" onclick="isBold()">
+            <div class="controls">
+                <label for="sizeSlider">フォントサイズ：</label>
+                <input type="range" id="sizeSlider" min="10" max="100" value="20" oninput="updateFontSize(this.value)">
+                <span id="sizeDisplay">20px</span> <!-- 今の値を表示する用（任意） -->
+            </div><br>
+            <textarea id="tryfontarea"></textarea>
+        </div>       
+    <div class="ftwr">
+        <footer>
+            <div class="ftt">
+                <small>©2nose</small>
+                <p id="home"><a id="toindex" href="index.html">ホームへ</a></p>
+            </div>
+        </footer>
+    </div>
+    <script src="gscript.js" lang="javascript"></script>
+    </body>
+</html>
+

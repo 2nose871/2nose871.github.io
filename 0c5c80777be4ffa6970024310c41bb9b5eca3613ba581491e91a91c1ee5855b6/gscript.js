@@ -29,11 +29,9 @@ for (let s of stim) {
 }
 if (isMobile == 0) {
     document.getElementById("headerSub").style.display = "none";
-    document.body.style.fontFamily = "LINE Seed JP";
 }
 if (isMobile == 1) {
     document.getElementById("headerSub").style.display = "";
-    document.body.style.fontFamily = "ヒラギノ角ゴ", "Meiryo", "sans-serif";
     showToast();
 }
 
@@ -100,4 +98,22 @@ if (vid != null && vid != "") {
                 }
             }
             fetchYouTubeTitle();
+}
+
+//2noseFont
+function isBold() {
+    document.getElementById("tryfontarea").classList.toggle("is-bold");
+}
+
+function updateFontSize(val) {
+    const el = document.getElementById("tryfontarea");
+    const display = document.getElementById("sizeDisplay");
+
+    // 1. フォントサイズを適用
+    el.style.fontSize = val + "px";
+
+    // 2. 右側の数字表示も更新（あれば）
+    if (display) {
+        display.innerText = val + "px";
+    }
 }

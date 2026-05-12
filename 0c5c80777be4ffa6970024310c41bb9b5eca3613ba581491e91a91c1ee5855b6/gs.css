@@ -53,6 +53,7 @@ body{
     margin: 0 0px 0 10px;
     display: flex;
     flex-direction: column;
+    font-family: "LINE Seed JP";
 }
 
 #main{
@@ -152,5 +153,25 @@ li {line-height: 1.5;}
     a{width: 30%;}
     .thumimg{width: 100%;}
     .vfl{display: flex; justify-content: center; margin-bottom: 5%;}
+}
+
+/*にのせフォント*/
+@font-face {
+    font-family: "2noseFont";
+    src: url(2noseFont.otf);
+}
+
+#txtbox{
+    flex: 1;
+    margin-left: 20px;
+}
+
+#tryfontarea {
+    font-family: "2noseFont";
+    font-size: 24px;
+}
+
+.is-bold {
+    font-weight: bold;
 }
 

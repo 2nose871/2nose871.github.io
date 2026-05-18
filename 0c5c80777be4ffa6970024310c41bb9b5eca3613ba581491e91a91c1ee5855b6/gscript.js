@@ -76,6 +76,7 @@ if(vid != "" && vid != null) {
     if(vid == "acnhaoi"){ytid = "63PLfXU29Z8";}
     if(vid == "acnhkin2"){ytid = "KjQ9fm3Q1uE";}
     if(vid == "kin2overcooked"){ytid = "V39Q2aI0FZ8";}
+    if(vid == "25sotsudanMaking"){ytid = "vd-7zYc4dKk";}
 }
 if (vid !== "" && vid !== null) {
     emP(ytid);

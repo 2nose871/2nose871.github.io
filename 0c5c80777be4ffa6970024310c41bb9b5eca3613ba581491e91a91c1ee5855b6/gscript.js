@@ -88,6 +88,10 @@ if (vid !== "" && vid !== null) {
 }
 console.log(vid);
 
+if(vid == "kindatooth"){
+    document.getElementById("vmsg").innerHTML = "こちらの動画内で、別の動画をまた上げる、と記載している内容について\n動画を作ってみたらあまりにもゴミ過ぎたので公開しないと思います。";
+}
+
 //動画情報取得
 let oEmbedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${ytid}&format=json`;
 if (vid != null && vid != "") {

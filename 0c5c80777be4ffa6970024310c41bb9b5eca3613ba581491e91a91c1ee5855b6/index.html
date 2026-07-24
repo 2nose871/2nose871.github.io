@@ -26,6 +26,25 @@
         <div id="videoPlayer"></div>
         <div id="vtitle"></div>
         <div id="vmsg"></div>
+        <div id="comments">
+            <summary>コメント</summary>
+                <div id="cusdis_thread"
+                      data-host="https://cusdis.com"
+                      data-app-id="a59cb41d-e138-4217-959c-45fe3b9426b4"
+                      data-page-id="{{ PAGE_ID }}"
+                      data-page-url="{{ PAGE_URL }}"
+                      data-page-title="{{ PAGE_TITLE }}">
+                </div>
+            <script async defer src="https://cusdis.com/js/cusdis.es.js" data-lang="ja"></script>
+        </div>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoId = urlParams.get('v') || 'default_video';
+            const target = document.getElementById('cusdis_thread');
+            target.setAttribute('data-page-id', videoId);
+            target.setAttribute('data-page-url', window.location.href);
+            target.setAttribute('data-page-title', `${videoId}`);
+</script>
         <p id="vlinks">
             <input type="button" value="プレイヤー消去" onClick="clearPlayer()">
             <details style="flex: 1;">

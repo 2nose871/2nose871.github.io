@@ -27,23 +27,133 @@
         <div id="vtitle"></div>
         <div id="vmsg"></div>
         <div id="comments">
-            <summary>コメント</summary>
-                <div id="cusdis_thread"
-                      data-host="https://cusdis.com"
-                      data-app-id="a59cb41d-e138-4217-959c-45fe3b9426b4"
-                      data-page-id="{{ PAGE_ID }}"
-                      data-page-url="{{ PAGE_URL }}"
-                      data-page-title="{{ PAGE_TITLE }}">
-                </div>
-            <script async defer src="https://cusdis.com/js/cusdis.es.js" data-lang="ja"></script>
-        </div>
-        <script>
-            const urlParams = new URLSearchParams(window.location.search);
-            const videoId = urlParams.get('v') || 'default_video';
-            const target = document.getElementById('cusdis_thread');
-            target.setAttribute('data-page-id', videoId);
-            target.setAttribute('data-page-url', window.location.href);
-            target.setAttribute('data-page-title', `${videoId}`);
+            <!-- ① 動画IDがある時だけ表示されるエリア -->
+<div id="comments-wrapper" style="display: none; max-width: 600px; margin: 30px auto 0; padding: 0 15px;">
+
+  <!-- 折りたたみ（アコーディオン）機能 -->
+  <details id="comments-details" style="border: 1px solid #ddd; border-radius: 8px; padding: 12px 16px; background: #fff;">
+    <summary style="cursor: pointer; font-weight: bold; font-size: 1rem; user-select: none;">
+      💬 コメント欄を開く / 閉じ me
+    </summary>
+
+    <!-- コメント欄の中身 -->
+    <div id="comments-content" style="margin-top: 15px;">
+      <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="ここに取得したApp_IDを入れる"
+        data-page-id=""
+        data-page-url=""
+        data-page-title=""
+        data-theme="auto">
+      </div>
+    </div>
+  </details>
+
+</div>
+
+<!-- ② 日本語化テキスト（確実に日本語にするための設定） -->
+<script>
+  window.CUSDIS_LOCALE = {
+    powered_by: 'システムの性質上コメントの反映まで時間がかかる場合があります',
+    post_comment: '投稿する',
+    loading: '読み込み中…',
+    email: 'メールアドレス（任意・非公開）',
+    nickname: 'なまえ',
+    reply_placeholder: 'コメントをどうぞ',
+    reply_btn: '送信',
+    sending: '送信中…',
+    mod_badge: '管理者',
+    content_is_required: 'コメントを入力してください',
+    nickname_is_required: 'ニックネームを入力してください',
+    comment_has_been_submitted: 'コメントを送信しました。'
+  };
+</script>
+
+<!-- ③ Cusdisスクリプト読み込み -->
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+<!-- ④ 条件判定・サイズ調整・アコーディオン動作用スクリプト -->
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const videoId = urlParams.get('v');
+
+  // URLに ?v= 動画ID がある時だけ処理
+  if (videoId) {
+    const wrapper = document.getElementById('comments-wrapper');
+    wrapper.style.display = 'block'; // エリア全体を表示
+
+    const target = document.getElementById('cusdis_thread');
+    target.setAttribute('data-page-id', videoId);
+    target.setAttribute('data-page-url', window.location.href);
+    target.setAttribute('data-page-title', `動画: ${videoId}`);
+
+    // ★ iframe内の入力欄サイズをコンパクトにする関数
+    // ★ iframe内の入力欄サイズ調整 & メールアドレス入力欄を消す関数
+function customizeCusdisIframe() {
+  const iframe = document.querySelector('#cusdis_thread iframe');
+  if (iframe) {
+    const applyStyle = () => {
+      try {
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+        if (!doc || doc.querySelector('#custom-cusdis-style')) return;
+        
+        const style = doc.createElement('style');
+        style.id = 'custom-cusdis-style';
+        style.innerHTML = `
+          /* ★ メールアドレスの入力欄とラベルを非表示にする */
+          input[type="email"],
+          input[type="email"] + label,
+          label:has(input[type="email"]) {
+            display: none !important;
+          }
+
+          /* コメント入力欄（textarea）の高さをコンパクトに */
+          textarea {
+            height: 70px !important;
+            min-height: 70px !important;
+            padding: 8px !important;
+            font-size: 14px !important;
+            border-radius: 6px !important;
+          }
+
+          /* ニックネーム欄の調整 */
+          input[type="text"] {
+            height: 34px !important;
+            padding: 4px 8px !important;
+            font-size: 14px !important;
+            border-radius: 6px !important;
+          }
+
+          /* 送信ボタンの調整 */
+          button[type="submit"] {
+            padding: 6px 16px !important;
+            font-size: 14px !important;
+            border-radius: 6px !important;
+          }
+        `;
+        doc.head.appendChild(style);
+      } catch(e) {}
+    };
+
+    iframe.onload = applyStyle;
+    applyStyle(); // すでに読み込まれている場合用
+  }
+}
+
+        iframe.onload = applyStyle;
+        applyStyle(); // すでに読み込まれている場合用
+      }
+    }
+
+    // 最初と開いたタイミングの両方でスタイルの適用をチェック
+    customizeCusdisIframe();
+    document.getElementById('comments-details').addEventListener('toggle', function() {
+      if (this.open) {
+        customizeCusdisIframe();
+      }
+    });
+  }
+</script>
 </script>
         <p id="vlinks">
             <input type="button" value="プレイヤー消去" onClick="clearPlayer()">
